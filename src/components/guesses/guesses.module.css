@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Trajan";
+  src: local("Trajan"), url("../../assets/fonts/Trajan\ Pro\ Regular.ttf");
+}
+
+.guessDesc {
+  font-family: "Trajan", sans-serif;
+}
+
+.guessesItem-1 {
+  opacity: 0;
+  animation: fadein 500ms ease forwards;
+}
+.guessesItem-2 {
+  opacity: 0;
+  animation: fadein 500ms ease forwards 600ms;
+}
+.guessesItem-3 {
+  opacity: 0;
+  animation: fadein 500ms ease forwards 1200ms;
+}
+.guessesItem-4 {
+  opacity: 0;
+  animation: fadein 500ms ease forwards 1800ms;
+}
+.guessesItem-5 {
+  opacity: 0;
+  animation: fadein 500ms ease forwards 2400ms;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -10,6 +10,10 @@ input::placeholder {
   color: #666666;
 }
 
+html {
+  cursor: url("../assets/images/cursor.png"), auto;
+}
+
 .queries-scroll::-webkit-scrollbar {
   width: 5px;
 }

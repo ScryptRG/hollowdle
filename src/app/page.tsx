@@ -4,6 +4,7 @@ import GodhomeIoLogo from "@/assets/images/godhome-io-logo.png";
 import BossesData from "@/assets/json/bosses_data.json";
 import { useEffect, useState } from "react";
 import Suggestions from "@/components/suggestions";
+import Guesses from "@/components/guesses";
 
 interface BossData {
   name: string;
@@ -12,8 +13,9 @@ interface BossData {
 
 export default function Home() {
   const [query, setQuery] = useState("");
-  const [suggestionsBox, setSuggestionsBox] = useState(true);
+  const [suggestionsBox, setSuggestionsBox] = useState(false);
   const [bossesData, setBossesData] = useState<BossData[]>([]);
+  const [guessed, setGuessed] = useState(false);
 
   useEffect(() => {
     const filteredBossesData = BossesData.filter((e) =>
@@ -23,7 +25,10 @@ export default function Home() {
     setBossesData(filteredBossesData);
   }, [query]);
   return (
-    <main className="flex min-h-screen flex-col items-center">
+    <main
+      className="flex min-h-screen flex-col items-center"
+      onClick={() => setSuggestionsBox(false)}
+    >
       <Image
         src={GodhomeIoLogo}
         alt="Godhome.io logo"
@@ -31,21 +36,29 @@ export default function Home() {
         width={350}
         className="mt-24 mb-12"
       />
-      <form className="flex gap-2 text-neutral-200 px-6">
+      <form
+        className="flex gap-2 text-neutral-200 px-6"
+        onClick={(e) => e.stopPropagation()}
+        onSubmit={(e) => {
+          e.preventDefault();
+          setGuessed(true);
+        }}
+      >
         <div className="relative max-w-[40rem]">
           <input
             type="text"
-            placeholder="Guess a boss"
+            placeholder="Type a boss name"
             value={query}
             onChange={(e) => {
               setQuery(e.target.value);
               setSuggestionsBox(true);
             }}
-            autoFocus
+            onFocus={() => setSuggestionsBox(true)}
+            // autoFocus
             size={200}
             className="w-full p-2 rounded bg-transparent border border-neutral-600"
           />
-          {query.length > 0 && suggestionsBox && (
+          {suggestionsBox && (
             <Suggestions
               bossesData={bossesData}
               setQuery={setQuery}
@@ -53,13 +66,11 @@ export default function Home() {
             />
           )}
         </div>
-        <button
-          type="button"
-          className="bg-neutral-200 text-black px-4 rounded"
-        >
+        <button className="bg-neutral-200 text-black px-4 rounded">
           Guess
         </button>
       </form>
+      {guessed && <Guesses />}
     </main>
   );
 }
