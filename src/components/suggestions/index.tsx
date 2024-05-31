@@ -16,7 +16,7 @@ interface SuggestionsProps {
 export default function Suggestions(props: SuggestionsProps) {
   const { bossesData, setQuery, setSuggestionsBox } = props;
   return (
-    <ul className="absolute w-full top-11 flex flex-col max-h-[12rem] bg-stone-800 bg-opacity-30 rounded-es-md overflow-y-auto queries-scroll backdrop-blur-lg">
+    <ul className="absolute w-full top-11 flex flex-col max-h-[12rem] bg-stone-800 bg-opacity-30 rounded-es-md overflow-y-auto queries-scroll backdrop-blur-lg z-20">
       <>
         {bossesData.map((e, i) => (
           <li

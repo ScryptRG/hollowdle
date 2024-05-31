@@ -7,45 +7,126 @@ import { useState } from "react";
 export default function Guesses() {
   const [hints, setHints] = useState([
     {
-      title: "Boss",
+      title: "Character",
       name: "Mantis Lords",
       icon: "enemies-portrait/Mantis Lords - bestiary_mantis_lords_s.png",
-      location: "Fungal Wastes",
     },
     {
       title: "Location",
-      name: "Fungal Wastes",
+      name: "Crystal",
       icon: "icons/locations/fungal-wastes.png",
+    },
+    {
+      title: "Health",
+      name: "530",
+      icon: "icons/health.png",
+    },
+    {
+      title: "Geo Drop",
+      name: "0",
+      icon: "icons/geo.png",
+    },
+    {
+      title: "Gender",
+      name: "Female",
+      icon: "icons/gender.png",
     },
   ]);
 
   return (
     <div
-      className={`relative flex flex-wrap gap-6 justify-center mt-24 text-white`}
+      className={`relative flex flex-wrap gap-8 justify-center mt-24 text-white`}
     >
       <Image
         src={require("@/assets/images/fleur-guesses.gif")}
         alt=""
-        className="absolute -top-8 left-0 z-10"
+        className="absolute -top-8 -left-6 z-10"
       />
-      {hints.map((e, i) => (
-        <div className="flex flex-col gap-2 items-center">
-          <h1 className="text-xl">{e.title}</h1>
-          <div
-            key={i}
-            className={`${styles[`guessesItem-${i + 1}`]} 
-            ${i === 0 && "!border-transparent bg-transparent"}
-            flex flex-col items-center gap-2 border border-red-800 bg-red-700 bg-opacity-20 p-2 rounded-xl text-center`}
-          >
-            <Image
-              src={require(`../../assets/images/${e.icon}`)}
-              alt=""
-              width={85}
-            />
-            <h1 className={styles.guessDesc}>{e.name}</h1>
-          </div>
+      <div className="flex flex-col gap-2 items-center">
+        <h1 className="font-['Trajan'] text-xl">Character</h1>
+        <div
+          className={`${styles[`guessesItem-2`]} 
+            border border-red-800 bg-red-700 bg-opacity-15 group hover:bg-opacity-20
+            ${styles.guessCard}
+            `}
+        >
+          <Image
+            src={require(`../../assets/images/icons/locations/fungal-wastes.png`)}
+            alt=""
+            height={60}
+            className="group-hover:-translate-y-1 duration-200"
+          />
+          <h1 className={styles.guessDesc}>Fungal Wastes</h1>
         </div>
-      ))}
+      </div>
+      <div className="flex flex-col gap-2 items-center">
+        <h1 className="font-['Trajan'] text-xl">Character</h1>
+        <div
+          className={`${styles[`guessesItem-2`]} 
+            border border-red-800 bg-red-700 bg-opacity-15 group hover:bg-opacity-20
+            ${styles.guessCard}
+            `}
+        >
+          <Image
+            src={require(`../../assets/images/icons/locations/fungal-wastes.png`)}
+            alt=""
+            height={60}
+            className="group-hover:-translate-y-1 duration-200"
+          />
+          <h1 className={styles.guessDesc}>Fungal Wastes</h1>
+        </div>
+      </div>
+      <div className="flex flex-col gap-2 items-center">
+        <h1 className="font-['Trajan'] text-xl">Character</h1>
+        <div
+          className={`${styles[`guessesItem-2`]} 
+            border border-red-800 bg-red-700 bg-opacity-15 group hover:bg-opacity-20
+            ${styles.guessCard}
+            `}
+        >
+          <Image
+            src={require(`../../assets/images/icons/locations/fungal-wastes.png`)}
+            alt=""
+            height={60}
+            className="group-hover:-translate-y-1 duration-200"
+          />
+          <h1 className={styles.guessDesc}>Fungal Wastes</h1>
+        </div>
+      </div>
+      <div className="flex flex-col gap-2 items-center">
+        <h1 className="font-['Trajan'] text-xl">Character</h1>
+        <div
+          className={`${styles[`guessesItem-2`]} 
+            border border-red-800 bg-red-700 bg-opacity-15 group hover:bg-opacity-20
+            ${styles.guessCard}
+            `}
+        >
+          <Image
+            src={require(`../../assets/images/icons/locations/fungal-wastes.png`)}
+            alt=""
+            height={60}
+            className="group-hover:-translate-y-1 duration-200"
+          />
+          <h1 className={styles.guessDesc}>Fungal Wastes</h1>
+        </div>
+      </div>
+      <div className="flex flex-col gap-2 items-center">
+        <h1 className="font-['Trajan'] text-xl">Character</h1>
+        <div
+          className={`${styles[`guessesItem-2`]} 
+            border border-red-800 bg-red-700 bg-opacity-15 group hover:bg-opacity-20
+            ${styles.guessCard}
+            `}
+        >
+          <Image
+            src={require(`../../assets/images/icons/locations/fungal-wastes.png`)}
+            alt=""
+            height={60}
+            className="group-hover:-translate-y-1 duration-200"
+          />
+          <h1 className={styles.guessDesc}>Fungal Wastes</h1>
+        </div>
+      </div>
     </div>
   );
 }
