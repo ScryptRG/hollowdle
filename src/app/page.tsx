@@ -1,29 +1,56 @@
 "use client";
 import Image from "next/image";
 import HollowdleLogo from "@/assets/images/hollowdle-logo.png";
-import BossesData from "@/assets/json/bosses_data.json";
-import { useEffect, useState } from "react";
+import CharactersData from "@/assets/json/characters_data.json";
+import { FormEvent, Fragment, useEffect, useState } from "react";
 import Suggestions from "@/components/suggestions";
 import Guesses from "@/components/guesses";
+import { log } from "console";
 
-interface BossData {
+interface CharactersDataInterface {
   name: string;
-  portrait: string;
+  characterIcon: string;
+  location: string;
+  locationIcon: string;
+  health: number;
+  geo_drop: number;
+  gender: string;
 }
 
 export default function Home() {
   const [query, setQuery] = useState("");
   const [suggestionsBox, setSuggestionsBox] = useState(false);
-  const [bossesData, setBossesData] = useState<BossData[]>([]);
+  const [charactersData, setCharactersData] = useState<
+    CharactersDataInterface[]
+  >([]);
   const [guessed, setGuessed] = useState(false);
 
+  const [hints, setHints] = useState<CharactersDataInterface[]>([]);
+
   useEffect(() => {
-    const filteredBossesData = BossesData.filter((e) =>
+    const filteredCharactersData = CharactersData.filter((e) =>
       e.name.toLocaleLowerCase().includes(query.toLocaleLowerCase().trim())
     );
 
-    setBossesData(filteredBossesData);
+    setCharactersData(filteredCharactersData);
   }, [query]);
+
+  const formSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const data = new FormData(e.target as HTMLFormElement);
+    console.log(data.get("characterValue"));
+    setGuessed(true);
+
+    const selectedCharacter = CharactersData.find(
+      (a) => a.name === data.get("characterValue")
+    );
+
+    if (selectedCharacter) {
+      setHints([...hints, selectedCharacter]);
+    }
+    setQuery("");
+  };
+
   return (
     <main
       className="flex min-h-screen flex-col items-center py-24"
@@ -39,20 +66,19 @@ export default function Home() {
       <form
         className="flex gap-2 text-neutral-200 px-6"
         onClick={(e) => e.stopPropagation()}
-        onSubmit={(e) => {
-          e.preventDefault();
-          setGuessed(true);
-        }}
+        onSubmit={formSubmit}
+        autoComplete="false"
       >
         <div className="relative max-w-[40rem]">
           <input
             type="text"
-            placeholder="Type a boss name"
+            placeholder="Type a character name"
             value={query}
             onChange={(e) => {
               setQuery(e.target.value);
               setSuggestionsBox(true);
             }}
+            name="characterValue"
             onFocus={() => setSuggestionsBox(true)}
             // autoFocus
             size={200}
@@ -60,7 +86,7 @@ export default function Home() {
           />
           {suggestionsBox && (
             <Suggestions
-              bossesData={bossesData}
+              charactersData={charactersData}
               setQuery={setQuery}
               setSuggestionsBox={setSuggestionsBox}
             />
@@ -72,12 +98,11 @@ export default function Home() {
       </form>
       {guessed && (
         <div className="flex flex-col gap-12">
-          <Guesses />
-          <Guesses />
-          <Guesses />
-          <Guesses />
-          <Guesses />
-          <Guesses />
+          {[...hints].reverse().map((e, i) => (
+            <Fragment key={i}>
+              <Guesses hints={e} index={i} guesses={hints} />
+            </Fragment>
+          ))}
         </div>
       )}
     </main>

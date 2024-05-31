@@ -1,0 +1,533 @@
+[
+  {
+    "name": "Absolute Radiance",
+    "characterIcon": "The Radiance - bestiary__0000_radiant_moth_s.png",
+    "location": "Godhome",
+    "locationIcon": "godhome.png",
+    "health": 2200,
+    "geo_drop": 0,
+    "gender": "Female"
+  },
+  {
+    "name": "Broken Vessel",
+    "characterIcon": "broken-vessel-portrait.png",
+    "location": "Ancient Basin",
+    "locationIcon": "ancient-basin.png",
+    "health": 525,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Brooding Mawlek",
+    "characterIcon": "Brooding Mawlek - bestiary_mawlek_s.png",
+    "location": "Forgotten Crossroads",
+    "locationIcon": "forgotten-crossroads.png",
+    "health": 300,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Brothers Oro and Mato",
+    "characterIcon": "Brothers Oro & Mato - bestiary_gg__0003_icon_nailmasters.png",
+    "location": "Godhome",
+    "locationIcon": "godhome.png",
+    "health": 2100,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Collector",
+    "characterIcon": "Collector - bestiary__0068_collector-_s.png",
+    "location": "City of Tears",
+    "locationIcon": "city-of-tears.png",
+    "health": 750,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Crystal Guardian",
+    "characterIcon": "Crystal Guardian - bestiary__0064_mega-beam-miner_s.png",
+    "location": "Crystal Peak",
+    "locationIcon": "crystal-peak.png",
+    "health": 280,
+    "geo_drop": 385,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Dung Defender",
+    "characterIcon": "Dung Defender - bestiary__0004_dung-defender_s.png",
+    "location": "Royal Waterways",
+    "locationIcon": "royal-waterways.png",
+    "health": 700,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Elder Baldur",
+    "characterIcon": "Elder Baldur - bestiary_blocker_s.png",
+    "location": "Multiple",
+    "locationIcon": "multiple.png",
+    "health": 60,
+    "geo_drop": 50,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Elder Hu",
+    "characterIcon": "Elder Hu - bestiary_0001_ghost_elderhu.png",
+    "location": "Fungal Wastes",
+    "locationIcon": "fungal-wastes.png",
+    "health": 250,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Enraged Guardian",
+    "characterIcon": "Crystal Guardian - bestiary__0064_mega-beam-miner_s.png",
+    "location": "Crystal Peak",
+    "locationIcon": "crystal-peak.png",
+    "health": 450,
+    "geo_drop": 550,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Failed Champion",
+    "characterIcon": "False Knight - bestiary_false-knight_s.png",
+    "location": "Forgotten Crossroads",
+    "locationIcon": "forgotten-crossroads.png",
+    "health": 1260,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "False Knight",
+    "characterIcon": "False Knight - bestiary_false-knight_s.png",
+    "location": "Forgotten Crossroads",
+    "locationIcon": "forgotten-crossroads.png",
+    "health": 355,
+    "geo_drop": 200,
+    "gender": "Male"
+  },
+  {
+    "name": "Galien",
+    "characterIcon": "Galien - bestiary_0002_ghost_galien.png",
+    "location": "Deepnest",
+    "locationIcon": "deepnest.png",
+    "health": 230,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "God Tamer",
+    "characterIcon": "God Tamer - bestiary__0066_lobster-lancer_s.png",
+    "location": "Kingdom's Edge",
+    "locationIcon": "kingdoms-edge.png",
+    "health": 1050,
+    "geo_drop": 2700,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Gorb",
+    "characterIcon": "Gorb - bestiary_0000_ghost_brainslug.png",
+    "location": "Howling Cliffs",
+    "locationIcon": "howling-cliffs.png",
+    "health": 200,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Gorgeous Husk",
+    "characterIcon": "Gorgeous Husk - bestiary_gold_royal_s.png",
+    "location": "City of Tears",
+    "locationIcon": "city-of-tears.png",
+    "health": 220,
+    "geo_drop": 420,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Great Husk Sentry",
+    "characterIcon": "Great Husk Sentry - bestiary_shield_guard_s.png",
+    "location": "City of Tears",
+    "locationIcon": "city-of-tears.png",
+    "health": 170,
+    "geo_drop": 100,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Grey Prince Zote",
+    "characterIcon": "Grey Prince Zote - bestiary_mighty_zote_portrait.png",
+    "location": "Dirtmouth",
+    "locationIcon": "dirtmouth.png",
+    "health": 1200,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Grimmkin Master",
+    "characterIcon": "Grimmkin Master - bestiary__0003_grimmkin_fat_portrait.png",
+    "location": "Multiple",
+    "locationIcon": "multiple.png",
+    "health": 80,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Grimmkin Nightmare",
+    "characterIcon": "Grimmkin Nightmare - bestiary__0002_grimmkin_tall_portrait.png",
+    "location": "Multiple",
+    "locationIcon": "multiple.png",
+    "health": 100,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Grimmkin Novice",
+    "characterIcon": "Grimmkin Novice - bestiary__0004_grimmkin_little_portrait.png",
+    "location": "Multiple",
+    "locationIcon": "multiple.png",
+    "health": 50,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Gruz Mother",
+    "characterIcon": "Gruz Mother - bestiary_big-bouncer_s.png",
+    "location": "Forgotten Crossroads",
+    "locationIcon": "forgotten-crossroads.png",
+    "health": 90,
+    "geo_drop": 50,
+    "gender": "Female"
+  },
+  {
+    "name": "Hive Knight",
+    "characterIcon": "Hive Knight - bestiary_hive_knight_s.png",
+    "location": "The Hive",
+    "locationIcon": "the-hive.png",
+    "health": 800,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "The Hollow Knight",
+    "characterIcon": "The Hollow Knight - bestiary__0002_hollow-knight_s.png",
+    "location": "Forgotten Crossroads",
+    "locationIcon": "forgotten-crossroads.png",
+    "health": 1250,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Hornet Protector",
+    "characterIcon": "Hornet - bestiary_hornet_s.png",
+    "location": "Greenpath",
+    "locationIcon": "greenpath.png",
+    "health": 225,
+    "geo_drop": 0,
+    "gender": "Female"
+  },
+  {
+    "name": "Hornet Sentinel",
+    "characterIcon": "Hornet - bestiary_hornet_s.png",
+    "location": "Kingdom's Edge",
+    "locationIcon": "kingdoms-edge.png",
+    "health": 700,
+    "geo_drop": 0,
+    "gender": "Female"
+  },
+  {
+    "name": "Kingsmould",
+    "characterIcon": "Kingsmould - bestiary_kingsguard_s.png",
+    "location": "White Palace",
+    "locationIcon": "white-palace.png",
+    "health": 170,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Lost Kin",
+    "characterIcon": "broken-vessel-portrait.png",
+    "location": "Ancient Basin",
+    "locationIcon": "ancient-basin.png",
+    "health": 1200,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Mantis Lords",
+    "characterIcon": "Mantis Lords - bestiary_mantis_lords_s.png",
+    "location": "Fungal Wastes",
+    "locationIcon": "fungal-wastes.png",
+    "health": 530,
+    "geo_drop": 0,
+    "gender": "Female"
+  },
+  {
+    "name": "Markoth",
+    "characterIcon": "Markoth - bestiary_0003_ghost_markoth.png",
+    "location": "Kingdom's Edge",
+    "locationIcon": "kingdoms-edge.png",
+    "health": 250,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Marmu",
+    "characterIcon": "Marmu - bestiary_0004_ghost_caterpillar.png",
+    "location": "Queen's Gardens",
+    "locationIcon": "queens-gardens.png",
+    "health": 200,
+    "geo_drop": 0,
+    "gender": "Female"
+  },
+  {
+    "name": "Massive Moss Charger",
+    "characterIcon": "Massive Moss Charger - bestiary_mega_moss_charger_s.png",
+    "location": "Greenpath",
+    "locationIcon": "greenpath.png",
+    "health": 100,
+    "geo_drop": 300,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Menderbug",
+    "characterIcon": "Menderbug - bestiary_menderbug_s.png",
+    "location": "Forgotten Crossroads",
+    "locationIcon": "forgotten-crossroads.png",
+    "health": 1,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Moss Knight",
+    "characterIcon": "Moss Knight - bestiary_moss_knight_s.png",
+    "location": "Greenpath",
+    "locationIcon": "greenpath.png",
+    "health": 50,
+    "geo_drop": 40,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Nailsage Sly",
+    "characterIcon": "Great Nailsage Sly - bestiary_gg__0004_icon_sage.png",
+    "location": "Godhome",
+    "locationIcon": "godhome.png",
+    "health": 1050,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Nightmare King Grimm",
+    "characterIcon": "Nightmare King Grimm - bestiary__0000_grimm_nightmare_boss_portrait.png",
+    "location": "Dirtmouth",
+    "locationIcon": "dirtmouth.png",
+    "health": 1500,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "No Eyes",
+    "characterIcon": "No Eyes - bestiary_0005_ghost_no-eyes.png",
+    "location": "Greenpath",
+    "locationIcon": "greenpath.png",
+    "health": 200,
+    "geo_drop": 0,
+    "gender": "Female"
+  },
+  {
+    "name": "Nosk",
+    "characterIcon": "Nosk - bestiary__0058_mimic-spider_s.png",
+    "location": "Deepnest",
+    "locationIcon": "deepnest.png",
+    "health": 680,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Oblobbles",
+    "characterIcon": "Oblobble - bestiary__0062_giant-fat-bee_s.png",
+    "location": "Kingdom's Edge",
+    "locationIcon": "kingdoms-edge.png",
+    "health": 560,
+    "geo_drop": 1800,
+    "gender": "Both"
+  },
+  {
+    "name": "Paintmaster Sheo",
+    "characterIcon": "Paintmaster Sheo - bestiary_gg__0002_icon_paintmaster.png",
+    "location": "Godhome",
+    "locationIcon": "godhome.png",
+    "health": 950,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Pale Lurker",
+    "characterIcon": "Pale Lurker - bestiary_gg__0000_icon_pale_runaway.png",
+    "location": "Kingdom's Edge",
+    "locationIcon": "kingdoms-edge.png",
+    "health": 290,
+    "geo_drop": 0,
+    "gender": "Female"
+  },
+  {
+    "name": "Pure Vessel",
+    "characterIcon": "Pure Vessel - bestiary_gg__0001_icon_HK_prime.png",
+    "location": "Godhome",
+    "locationIcon": "godhome.png",
+    "health": 1600,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Shrumal Ogre",
+    "characterIcon": "Shrumal Ogre - bestiary_mushroom_brawler_s.png",
+    "location": "Fungal Wastes",
+    "locationIcon": "fungal-wastes.png",
+    "health": 160,
+    "geo_drop": 90,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Sisters of Battle",
+    "characterIcon": "Mantis Lords - bestiary_mantis_lords_s.png",
+    "location": "Godhome",
+    "locationIcon": "godhome.png",
+    "health": 2750,
+    "geo_drop": 0,
+    "gender": "Female"
+  },
+  {
+    "name": "Soul Master",
+    "characterIcon": "Soul Master - bestiary_mage_lord_s.png",
+    "location": "City of Tears",
+    "locationIcon": "city-of-tears.png",
+    "health": 385,
+    "geo_drop": 380,
+    "gender": "Male"
+  },
+  {
+    "name": "Soul Twister",
+    "characterIcon": "Soul Twister - bestiary_mage_s.png",
+    "location": "City of Tears",
+    "locationIcon": "city-of-tears.png",
+    "health": 35,
+    "geo_drop": 25,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Soul Tyrant",
+    "characterIcon": "Soul Master - bestiary_mage_lord_s.png",
+    "location": "City of Tears",
+    "locationIcon": "city-of-tears.png",
+    "health": 1250,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Soul Warrior",
+    "characterIcon": "Soul Warrior - bestiary_mage_knight_s.png",
+    "location": "City of Tears",
+    "locationIcon": "city-of-tears.png",
+    "health": 180,
+    "geo_drop": 200,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Stalking Devout",
+    "characterIcon": "Stalking Devout - bestiary_spider_soldier_s.png",
+    "location": "Deepnest",
+    "locationIcon": "deepnest.png",
+    "health": 100,
+    "geo_drop": 43,
+    "gender": "Unknown"
+  },
+  {
+    "name": "The Radiance",
+    "characterIcon": "The Radiance - bestiary__0000_radiant_moth_s.png",
+    "location": "Forgotten Crossroads",
+    "locationIcon": "forgotten-crossroads.png",
+    "health": 1700,
+    "geo_drop": 0,
+    "gender": "Female"
+  },
+  {
+    "name": "Traitor Lord",
+    "characterIcon": "Traitor Lord - bestiary__0060_traitor-lord_s.png",
+    "location": "Queen's Gardens",
+    "locationIcon": "queens-gardens.png",
+    "health": 800,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Troupe Master Grimm",
+    "characterIcon": "Troupe Master Grimm - bestiary__0001_grimm_boss_portrait.png",
+    "location": "Dirtmouth",
+    "locationIcon": "dirtmouth.png",
+    "health": 800,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Uumuu",
+    "characterIcon": "Uumuu - bestiary__0072_giant-jellyfish_s.png",
+    "location": "Fog Canyon",
+    "locationIcon": "fog-canyon.png",
+    "health": 300,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Vengefly King",
+    "characterIcon": "Vengefly King - bestiary_big-buzzer_s.png",
+    "location": "Greenpath",
+    "locationIcon": "greenpath.png",
+    "health": 55,
+    "geo_drop": 65,
+    "gender": "Male"
+  },
+  {
+    "name": "Watcher Knights",
+    "characterIcon": "Watcher Knight - bestiary_black_knight_s.png",
+    "location": "City of Tears",
+    "locationIcon": "city-of-tears.png",
+    "health": 1320,
+    "geo_drop": 650,
+    "gender": "Unknown"
+  },
+  {
+    "name": "White Defender",
+    "characterIcon": "White Defender - bestiary_White_Defender_portrait.png",
+    "location": "Royal Waterways",
+    "locationIcon": "royal-waterways.png",
+    "health": 1600,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Winged Nosk",
+    "characterIcon": "Nosk - bestiary__0058_mimic-spider_s.png",
+    "location": "Godhome",
+    "locationIcon": "godhome.png",
+    "health": 750,
+    "geo_drop": 0,
+    "gender": "Unknown"
+  },
+  {
+    "name": "Xero",
+    "characterIcon": "Xero - bestiary_0006_ghost_xero.png",
+    "location": "Resting Grounds",
+    "locationIcon": "resting-grounds.png",
+    "health": 200,
+    "geo_drop": 0,
+    "gender": "Male"
+  },
+  {
+    "name": "Zote the Mighty",
+    "characterIcon": "Zote the Mighty - bestiary__0048_zote_s.png",
+    "location": "Kingdom's Edge",
+    "locationIcon": "kingdoms-edge.png",
+    "health": 200,
+    "geo_drop": 900,
+    "gender": "Male"
+  }
+]

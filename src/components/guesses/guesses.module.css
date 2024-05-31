@@ -35,9 +35,9 @@
   justify-content: center;
   gap: 0.5em;
   width: 9em;
-  height: 7em;
+  height: 8em;
   padding: 0.5em;
-  border-radius: 0.75em;
+  border-radius: 0.5em;
   transition: all;
   text-align: center;
 }
