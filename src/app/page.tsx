@@ -5,7 +5,6 @@ import CharactersData from "@/assets/json/characters_data.json";
 import { FormEvent, Fragment, useEffect, useState } from "react";
 import Suggestions from "@/components/suggestions";
 import Guesses from "@/components/guesses";
-import { log } from "console";
 
 interface CharactersDataInterface {
   name: string;
@@ -36,6 +35,7 @@ export default function Home() {
   }, [query]);
 
   const formSubmit = (e: FormEvent<HTMLFormElement>) => {
+    setHints([]);
     e.preventDefault();
     const data = new FormData(e.target as HTMLFormElement);
     console.log(data.get("characterValue"));

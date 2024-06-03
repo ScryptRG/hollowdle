@@ -7,13 +7,36 @@
   font-family: "Trajan", sans-serif;
 }
 
-.guessesItem {
-  /* opacity: 0; */
-  background-color: red;
+.hintItem-1 {
+  opacity: 0;
   animation: fadein 500ms ease forwards;
 }
+.hintItem-2 {
+  opacity: 0;
+  animation: fadein 500ms ease forwards 300ms;
+}
+.hintItem-3 {
+  opacity: 0;
+  animation: fadein 500ms ease forwards 600ms;
+}
+.hintItem-4 {
+  opacity: 0;
+  animation: fadein 500ms ease forwards 900ms;
+}
+.hintItem-5 {
+  opacity: 0;
+  animation: fadein 500ms ease forwards 1200ms;
+}
 
-.guessCard {
+.wrongItem {
+  background: red;
+}
+
+.rightItem {
+  background: green;
+}
+
+.hintCard {
   display: flex;
   flex-direction: column;
   align-items: center;
