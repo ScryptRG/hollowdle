@@ -21,7 +21,7 @@ export default function RootLayout({
         <Image
           src={HollowdleBg}
           alt="Hollowdle background"
-          className="w-full fixed top-0 right-0 -z-10 select-none opacity-5"
+          className="w-full fixed top-0 right-0 -z-10 select-none opacity-10"
         />
         {children}
       </body>

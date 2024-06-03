@@ -3,10 +3,6 @@
   src: local("Trajan"), url("../../assets/fonts/Trajan\ Pro\ Regular.ttf");
 }
 
-.guessDesc {
-  font-family: "Trajan", sans-serif;
-}
-
 .hintItem-1 {
   opacity: 0;
   animation: fadein 500ms ease forwards;
@@ -29,11 +25,21 @@
 }
 
 .wrongItem {
-  background: red;
+  background: rgba(185, 28, 28, 0.1);
+  border: 1px solid #b91c1c;
 }
 
 .rightItem {
-  background: green;
+  background: rgba(21, 128, 60, 0.1);
+  border: 1px solid #15803d;
+}
+
+.wrongItem:hover {
+  background: rgba(185, 28, 28, 0.15);
+}
+
+.rightItem:hover {
+  background: rgba(21, 128, 60, 0.15);
 }
 
 .hintCard {
@@ -42,12 +48,31 @@
   align-items: center;
   justify-content: center;
   gap: 0.5em;
-  width: 9em;
-  height: 8em;
+  width: 10em;
+  height: 9em;
   padding: 0.5em;
   border-radius: 0.5em;
   transition: all;
   text-align: center;
+}
+
+.guessDesc {
+  position: relative;
+  font-family: "Trajan", sans-serif;
+}
+
+.arrowUp {
+  position: absolute;
+  rotate: -90deg;
+  right: -25px;
+  top: -1px;
+}
+
+.arrowDown {
+  position: absolute;
+  rotate: 90deg;
+  right: -25px;
+  top: -1px;
 }
 
 /* border border-red-800 bg-red-700 bg-opacity-15 group hover:bg-opacity-20 */

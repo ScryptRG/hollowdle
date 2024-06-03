@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
 import styles from "./guesses.module.css";
+import CharactersData from "@/assets/json/characters_data.json";
 import "animate.css";
+import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { useEffect, useState } from "react";
 
 interface CharactersDataInterface {
@@ -25,6 +27,17 @@ interface ConfirmHints {
 
 export default function Guesses(props: GuessesProps) {
   const { hints, index, guesses } = props;
+
+  const [chosenCharacter, setChosenCharacter] =
+    useState<CharactersDataInterface>({
+      name: "",
+      characterIcon: "",
+      location: "",
+      locationIcon: "",
+      health: 0,
+      geo_drop: 0,
+      gender: "",
+    });
 
   const guessItems = [
     {
@@ -54,44 +67,53 @@ export default function Guesses(props: GuessesProps) {
     },
   ];
 
-  const gameCharacter = {
-    name: "Soul Master",
-    characterIcon: "Soul Master - bestiary_mage_lord_s.png",
-    location: "City of Tears",
-    locationIcon: "city-of-tears.png",
-    health: 385,
-    geo_drop: 380,
-    gender: "Male",
-  };
+  // const gameCharacter = {
+  //   name: "Soul Master",
+  //   characterIcon: "Soul Master - bestiary_mage_lord_s.png",
+  //   location: "City of Tears",
+  //   locationIcon: "city-of-tears.png",
+  //   health: 385,
+  //   geo_drop: 380,
+  //   gender: "Male",
+  // };
 
-  const confirm = (i: number, e: ConfirmHints) => {
+  type ConfirmResult = "rightItem" | "wrongItem" | "";
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * CharactersData.length);
+    setChosenCharacter(CharactersData[18]);
+  }, []);
+
+  const confirm = (i: number, e: ConfirmHints): ConfirmResult => {
     switch (i) {
       case 1:
-        if (e.desc === gameCharacter.location) {
+        if (e.desc === chosenCharacter.location) {
           return "rightItem";
         } else {
           return "wrongItem";
         }
       case 2:
-        if (e.desc === gameCharacter.health) {
+        if (e.desc === chosenCharacter.health) {
           return "rightItem";
         } else {
           return "wrongItem";
         }
       case 3:
-        if (e.desc === gameCharacter.geo_drop) {
+        if (e.desc === chosenCharacter.geo_drop) {
           return "rightItem";
         } else {
           return "wrongItem";
         }
       case 4:
-        if (e.desc === gameCharacter.gender) {
+        if (e.desc === chosenCharacter.gender) {
           return "rightItem";
         } else {
           return "wrongItem";
         }
+      case 0:
+        return "";
       default:
-        break;
+        throw new Error("Invalid case");
     }
   };
 
@@ -105,17 +127,12 @@ export default function Guesses(props: GuessesProps) {
         className="absolute -top-8 -left-6 z-10"
       />
       {guessItems.map((e, i) => (
-        <div
-          className={`flex flex-col gap-2 items-center ${
-            styles[confirm(i, e)] ?? null
-          }`}
-          key={i}
-        >
+        <div className={`flex flex-col gap-2 items-center`} key={i}>
           <h1 className="font-['Trajan'] text-xl">{e.title}</h1>
           <div
-            className={`group ${index === 0 && styles[`hintItem-${i + 1}`]} ${
+            className={`group ${styles[`hintItem-${i + 1}`]} ${
               styles.hintCard
-            }`}
+            } ${styles[confirm(i, e)] ?? null}`}
           >
             <Image
               src={require(`../../assets/images/icons/${e.icon}`)}
@@ -123,7 +140,35 @@ export default function Guesses(props: GuessesProps) {
               height={70}
               className="group-hover:-translate-y-1 duration-200"
             />
-            <h1 className={styles.guessDesc}>{e.desc}</h1>
+            <h1 className={styles.guessDesc}>
+              {e.desc}
+              {i === 2 &&
+                Number(e.desc) != chosenCharacter.health &&
+                (Number(e.desc) < chosenCharacter.health ? (
+                  <MdOutlineArrowRightAlt
+                    size={25}
+                    className={styles.arrowUp}
+                  />
+                ) : (
+                  <MdOutlineArrowRightAlt
+                    size={25}
+                    className={styles.arrowDown}
+                  />
+                ))}
+              {i === 3 &&
+                Number(e.desc) != chosenCharacter.geo_drop &&
+                (Number(e.desc) < chosenCharacter.geo_drop ? (
+                  <MdOutlineArrowRightAlt
+                    size={25}
+                    className={styles.arrowUp}
+                  />
+                ) : (
+                  <MdOutlineArrowRightAlt
+                    size={25}
+                    className={styles.arrowDown}
+                  />
+                ))}
+            </h1>
           </div>
         </div>
       ))}

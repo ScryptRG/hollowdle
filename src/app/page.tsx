@@ -22,7 +22,6 @@ export default function Home() {
   const [charactersData, setCharactersData] = useState<
     CharactersDataInterface[]
   >([]);
-  const [guessed, setGuessed] = useState(false);
 
   const [hints, setHints] = useState<CharactersDataInterface[]>([]);
 
@@ -35,25 +34,23 @@ export default function Home() {
   }, [query]);
 
   const formSubmit = (e: FormEvent<HTMLFormElement>) => {
-    setHints([]);
     e.preventDefault();
-    const data = new FormData(e.target as HTMLFormElement);
-    console.log(data.get("characterValue"));
-    setGuessed(true);
+    if (query != "") {
+      const data = new FormData(e.target as HTMLFormElement);
+      const selectedCharacter = CharactersData.find(
+        (a) => a.name === data.get("characterValue")
+      );
 
-    const selectedCharacter = CharactersData.find(
-      (a) => a.name === data.get("characterValue")
-    );
-
-    if (selectedCharacter) {
-      setHints([...hints, selectedCharacter]);
+      if (selectedCharacter) {
+        setHints([...hints, selectedCharacter]);
+      }
+      setQuery("");
     }
-    setQuery("");
   };
 
   return (
     <main
-      className="flex min-h-screen flex-col items-center py-24"
+      className="flex min-h-screen flex-col items-center pt-6 pb-24"
       onClick={() => setSuggestionsBox(false)}
     >
       <Image
@@ -96,15 +93,13 @@ export default function Home() {
           Guess
         </button>
       </form>
-      {guessed && (
-        <div className="flex flex-col gap-12">
-          {[...hints].reverse().map((e, i) => (
-            <Fragment key={i}>
-              <Guesses hints={e} index={i} guesses={hints} />
-            </Fragment>
-          ))}
-        </div>
-      )}
+      <div className="flex flex-col gap-12">
+        {[...hints].map((e, i) => (
+          <Fragment key={i}>
+            <Guesses hints={e} index={i} guesses={hints} />
+          </Fragment>
+        ))}
+      </div>
     </main>
   );
 }
