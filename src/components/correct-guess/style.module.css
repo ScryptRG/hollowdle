@@ -3,7 +3,24 @@
   src: local("Trajan"), url("../../assets/fonts/Trajan\ Pro\ Regular.ttf");
 }
 
-.correctText {
+.trajan {
   font-family: "Trajan";
-  font-weight: bold;
+}
+
+.correct {
+  animation: fadein 300ms ease-in;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

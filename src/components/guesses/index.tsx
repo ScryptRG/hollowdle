@@ -18,6 +18,7 @@ interface CharactersDataInterface {
 interface GuessesProps {
   hints: CharactersDataInterface;
   guesses: CharactersDataInterface[];
+  chosenCharacter: CharactersDataInterface;
 }
 
 interface ConfirmHints {
@@ -25,18 +26,7 @@ interface ConfirmHints {
 }
 
 export default function Guesses(props: GuessesProps) {
-  const { hints, guesses } = props;
-
-  const [chosenCharacter, setChosenCharacter] =
-    useState<CharactersDataInterface>({
-      name: "",
-      characterIcon: "",
-      location: "",
-      locationIcon: "",
-      health: 0,
-      geo_drop: 0,
-      gender: "",
-    });
+  const { hints, chosenCharacter } = props;
 
   const guessItems = [
     {
@@ -77,11 +67,6 @@ export default function Guesses(props: GuessesProps) {
   // };
 
   type ConfirmResult = "rightItem" | "wrongItem" | "";
-
-  useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * CharactersData.length);
-    setChosenCharacter(CharactersData[18]);
-  }, []);
 
   const confirm = (i: number, e: ConfirmHints): ConfirmResult => {
     switch (i) {

@@ -24,6 +24,9 @@ export default function Home() {
   const [charactersData, setCharactersData] = useState<
     CharactersDataInterface[]
   >([]);
+  const [chosenCharacter, _] = useState<CharactersDataInterface>(
+    CharactersData[Math.floor(Math.random() * CharactersData.length)]
+  );
 
   const [hints, setHints] = useState<CharactersDataInterface[]>([]);
   useEffect(() => {
@@ -46,7 +49,7 @@ export default function Home() {
         setHints([...hints, selectedCharacter]);
       }
 
-      if (selectedCharacter?.name === "Soul Master") {
+      if (selectedCharacter?.name === chosenCharacter.name) {
         setCorrectGuess(true);
       }
       setQuery("");
@@ -65,48 +68,56 @@ export default function Home() {
         width={350}
         className="mb-12"
       />
-      <form
-        className="flex gap-2 text-neutral-200 px-6"
-        onClick={(e) => e.stopPropagation()}
-        onSubmit={formSubmit}
-        autoComplete="false"
-      >
-        <div className="relative max-w-[40rem]">
-          <input
-            type="text"
-            placeholder="Type a character name"
-            value={query}
-            onChange={(e) => {
-              setQuery(e.target.value);
-              setSuggestionsBox(true);
-            }}
-            name="characterValue"
-            onFocus={() => setSuggestionsBox(true)}
-            // autoFocus
-            size={200}
-            className="w-full p-2 rounded bg-transparent border border-neutral-600"
-          />
-          {suggestionsBox && (
-            <Suggestions
-              charactersData={charactersData}
-              setQuery={setQuery}
-              setSuggestionsBox={setSuggestionsBox}
-            />
-          )}
-        </div>
-        <button className="bg-neutral-200 text-black px-4 rounded">
-          Guess
-        </button>
-      </form>
-      {correctGuess && <CorrectGuess />}
+
+      {correctGuess && <CorrectGuess chosenCharacter={chosenCharacter} />}
       {!correctGuess && (
-        <div className="flex flex-col-reverse gap-12">
-          {hints.map((e, i) => (
-            <Fragment key={i}>
-              <Guesses hints={e} guesses={hints} />
-            </Fragment>
-          ))}
-        </div>
+        <>
+          <form
+            className="flex gap-2 text-neutral-200 px-6"
+            onClick={(e) => e.stopPropagation()}
+            onSubmit={formSubmit}
+            autoComplete="false"
+          >
+            <div className="relative max-w-[40rem]">
+              <input
+                type="text"
+                placeholder="Type a character name"
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                  setSuggestionsBox(true);
+                }}
+                name="characterValue"
+                onFocus={() => setSuggestionsBox(true)}
+                // autoFocus
+                size={200}
+                disabled={correctGuess}
+                className="w-full p-2 rounded bg-transparent border border-neutral-600"
+              />
+              {suggestionsBox && (
+                <Suggestions
+                  charactersData={charactersData}
+                  setQuery={setQuery}
+                  setSuggestionsBox={setSuggestionsBox}
+                />
+              )}
+            </div>
+            <button className="bg-neutral-200 text-black px-4 rounded">
+              Guess
+            </button>
+          </form>
+          <div className="flex flex-col-reverse gap-12">
+            {hints.map((e, i) => (
+              <Fragment key={i}>
+                <Guesses
+                  hints={e}
+                  guesses={hints}
+                  chosenCharacter={chosenCharacter}
+                />
+              </Fragment>
+            ))}
+          </div>
+        </>
       )}
     </main>
   );
