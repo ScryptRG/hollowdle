@@ -17,7 +17,6 @@ interface CharactersDataInterface {
 }
 interface GuessesProps {
   hints: CharactersDataInterface;
-  index: number;
   guesses: CharactersDataInterface[];
 }
 
@@ -26,7 +25,7 @@ interface ConfirmHints {
 }
 
 export default function Guesses(props: GuessesProps) {
-  const { hints, index, guesses } = props;
+  const { hints, guesses } = props;
 
   const [chosenCharacter, setChosenCharacter] =
     useState<CharactersDataInterface>({

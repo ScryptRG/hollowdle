@@ -5,6 +5,7 @@ import CharactersData from "@/assets/json/characters_data.json";
 import { FormEvent, Fragment, useEffect, useState } from "react";
 import Suggestions from "@/components/suggestions";
 import Guesses from "@/components/guesses";
+import CorrectGuess from "@/components/correct-guess";
 
 interface CharactersDataInterface {
   name: string;
@@ -18,13 +19,13 @@ interface CharactersDataInterface {
 
 export default function Home() {
   const [query, setQuery] = useState("");
+  const [correctGuess, setCorrectGuess] = useState(false);
   const [suggestionsBox, setSuggestionsBox] = useState(false);
   const [charactersData, setCharactersData] = useState<
     CharactersDataInterface[]
   >([]);
 
   const [hints, setHints] = useState<CharactersDataInterface[]>([]);
-
   useEffect(() => {
     const filteredCharactersData = CharactersData.filter((e) =>
       e.name.toLocaleLowerCase().includes(query.toLocaleLowerCase().trim())
@@ -43,6 +44,10 @@ export default function Home() {
 
       if (selectedCharacter) {
         setHints([...hints, selectedCharacter]);
+      }
+
+      if (selectedCharacter?.name === "Soul Master") {
+        setCorrectGuess(true);
       }
       setQuery("");
     }
@@ -93,13 +98,16 @@ export default function Home() {
           Guess
         </button>
       </form>
-      <div className="flex flex-col gap-12">
-        {[...hints].map((e, i) => (
-          <Fragment key={i}>
-            <Guesses hints={e} index={i} guesses={hints} />
-          </Fragment>
-        ))}
-      </div>
+      {correctGuess && <CorrectGuess />}
+      {!correctGuess && (
+        <div className="flex flex-col-reverse gap-12">
+          {hints.map((e, i) => (
+            <Fragment key={i}>
+              <Guesses hints={e} guesses={hints} />
+            </Fragment>
+          ))}
+        </div>
+      )}
     </main>
   );
 }

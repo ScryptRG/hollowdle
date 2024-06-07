@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Trajan";
+  src: local("Trajan"), url("../../assets/fonts/Trajan\ Pro\ Regular.ttf");
+}
+
+.correctText {
+  font-family: "Trajan";
+  font-weight: bold;
+}
