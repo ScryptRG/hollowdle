@@ -122,7 +122,7 @@ export default function Home() {
           </form>
           {alreadyTried && (
             <span className="text-red-500 -ml-[29rem] mt-2">
-              You've already tried this character.
+              You&apos;ve already tried this character.
             </span>
           )}
           <div className="flex flex-col-reverse gap-12">
