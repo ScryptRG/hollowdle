@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
 import styles from "./guesses.module.css";
-import CharactersData from "@/assets/json/characters_data.json";
 import "animate.css";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
-import { useEffect, useState } from "react";
 
 interface CharactersDataInterface {
   name: string;
@@ -107,7 +105,7 @@ export default function Guesses(props: GuessesProps) {
     >
       <Image
         src={require("@/assets/images/fleur-guesses.gif")}
-        alt=""
+        alt="Fleur"
         className="absolute -top-8 -left-6 z-10"
       />
       {guessItems.map((e, i) => (
@@ -120,7 +118,7 @@ export default function Guesses(props: GuessesProps) {
           >
             <Image
               src={require(`../../assets/images/icons/${e.icon}`)}
-              alt=""
+              alt="Hint icon"
               height={70}
               className="group-hover:-translate-y-1 duration-200"
             />

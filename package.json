@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "canvas-confetti": "^1.9.3",
     "next": "14.2.3",
     "react": "^18",
+    "react-canvas-confetti": "^2.0.7",
+    "react-confetti-explosion": "^2.1.2",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
+    "react-use": "^17.5.0",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {

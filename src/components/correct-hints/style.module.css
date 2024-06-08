@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Trajan";
+  src: local("Trajan"), url("../../assets/fonts/Trajan\ Pro\ Regular.ttf");
+}
+
+.rightItem {
+  background: rgba(21, 128, 60, 0.1);
+  border: 1px solid #15803d;
+}
+
+.rightItem:hover {
+  background: rgba(21, 128, 60, 0.15);
+}
+
+.hintCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  width: 10em;
+  height: 9em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  transition: all;
+  text-align: center;
+  animation: fadein 500ms ease;
+}
+
+.guessDesc {
+  position: relative;
+  font-family: "Trajan", sans-serif;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

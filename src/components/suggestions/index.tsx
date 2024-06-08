@@ -37,7 +37,7 @@ export default function Suggestions(props: SuggestionsProps) {
             <Image
               src={require(`./../../assets/images/icons/characters/${e.characterIcon}`)}
               width={30}
-              alt=""
+              alt={`${e.name} icon`}
             />
             {e.name}
           </li>
