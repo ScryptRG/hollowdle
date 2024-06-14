@@ -67,12 +67,17 @@ export default function Home() {
       className="flex min-h-screen flex-col items-center pt-6 pb-24"
       onClick={() => setSuggestionsBox(false)}
     >
-      <Image
-        src={HollowdleLogo}
-        alt="Hollowdle logo"
-        width={350}
-        className="mb-12"
-      />
+      <div className="relative">
+        <Image
+          src={HollowdleLogo}
+          alt="Hollowdle logo"
+          width={350}
+          className="mb-12"
+        />
+        <span className="text text-red-500 absolute right-4 -top-1 border border-red-500 px-2 rounded-md">
+          BETA
+        </span>
+      </div>
 
       {correctGuess && (
         <CorrectGuess
