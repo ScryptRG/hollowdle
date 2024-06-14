@@ -9,7 +9,7 @@ const OpenSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hollowdle",
-  icons: { icon: [{ url: "./favicon.ico" }] },
+  icons: { icon: [{ url: "./icon.ico" }] },
 };
 
 export default function RootLayout({
