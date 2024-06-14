@@ -4,6 +4,7 @@ import HollowdleBg from "@/assets/images/hollowdle-bg.png";
 import "./globals.css";
 import Image from "next/image";
 import Kofi from "@/components/kofi";
+import Credit from "@/components/credit";
 
 const OpenSans = Open_Sans({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${OpenSans.className} bg-black`}>
+        <Credit />
         <Image
           src={HollowdleBg}
           alt="Hollowdle background"
